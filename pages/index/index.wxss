@@ -1,0 +1,33 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+image {
+  width: 220rpx;
+  overflow: hidden;
+}
+
+.details {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.item {
+  text-align: center;
+  width: 33.3%
+}
+text {
+  font-size: 80rpx;
+  color: #3C5F81;
+}

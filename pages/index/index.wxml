@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 地址 -->
+  <view class="adress">
+    <picker mode="region" bindchange="changeAddress">{{address}}</picker>
+  </view>
+  <!-- 温度和天气 -->
+  <view class="wd">
+    <text>{{now.tmp}}℃ {{now.cond_txt}}</text>
+  </view>
+  <!-- 图片 -->  
+  <view class="image">
+    <image src="/images/{{now.cond_code}}.png" wx:if="{{now.cond_code.length>0}}"></image>
+  </view>
+
+  <!-- 天气的湿度，气压， 能见度 -->
+  <view class="details">
+    <view class="bar">
+      <view class="item">湿度</view>
+      <view class="item">气压</view>
+      <view class="item">能见度</view>
+    </view>
+    <view class="bar">
+      <view class="item">{{now.hum}}%</view>
+      <view class="item">{{now.pres}}hPa</view>
+      <view class="item">{{now.vis}}Km</view>
+    </view>
+    <view class="bar">
+      <view class="item">风向</view>
+      <view class="item">风速</view>
+      <view class="item">风力</view>
+    </view>
+    <view class="bar">
+      <view class="item">{{now.wind_dir}}</view>
+      <view class="item">{{now.wind_spd}}Km/h</view>
+      <view class="item">{{now.wind_sc}}级</view>
+    </view>
+  </view>
+</view>
